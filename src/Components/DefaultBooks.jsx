@@ -30,9 +30,10 @@ const DefaultBooks = () => {
     <div className="flex flex-row gap-4 h-80 my-2 mx-6 p-4 justify-between">
       {featuredBooks.map((book, idx) => (
         <>
-          // when in spotlight
-          {spotlight == idx && <></>}
-          // when not in spotlight
+
+          {spotlight == idx && <div>
+          </div>}
+
           <div
             key={idx}
             className={`flex flex-row-reverse items-center w-[480px] bg-white ${
