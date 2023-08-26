@@ -7,11 +7,11 @@ import { InputProvider } from "./Components/context/InputProvider";
 const App = () => {
   return (
     <InputProvider>
-      <>
+      <div className="bg-[#242121] text-[#FFFFFF]">
         <Navbar />
         <DefaultBooks />
         <ShowAllBooks />
-      </>
+      </div>
     </InputProvider>
   );
 };
