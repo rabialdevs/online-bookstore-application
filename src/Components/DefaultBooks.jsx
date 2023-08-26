@@ -30,14 +30,22 @@ const DefaultBooks = () => {
     <div className="flex flex-row gap-4 h-80 my-2 mx-6 p-4 justify-between">
       {featuredBooks.map((book, idx) => (
         <>
-
           {spotlight == idx && <div>
+            <h1 className="text-3xl font-bold">
+              {book.title}
+            </h1>
+            <p className="text-xl">
+              {book.authors}
+            </p>
+            <p className="text-xl">
+              {book.publishedDate}
+            </p>
           </div>}
 
           <div
             key={idx}
             className={`flex flex-row-reverse items-center w-[480px] bg-white ${
-              spotlight != null && idx != spotlight && "hidden"
+              spotlight != null && idx != spotlight && "invisible"
             } ${spotlight == idx && ""}`}
           >
             <div className="flex flex-col items-center justify-center bg-[#71C5F461] h-[calc(100%-20px)] -translate-x-5 p-8">
